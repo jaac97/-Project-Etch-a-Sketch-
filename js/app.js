@@ -39,7 +39,7 @@ function setColor(e) {
 }
 
 function setModo(e) {
-    if(e.target.id !== 'clear') {
+    if(e.target.id !== 'clear' && e.target.id !== 'popUp') {
         modo = e.target.id
          const btns = document.querySelectorAll('button[id]');
          btns.forEach(btn => {
@@ -57,7 +57,7 @@ function setModo(e) {
 
 function getGridSize() {
     const size = prompt("Write your grid size (max: 100)") || 16;
-    console.log(size)
+    showGrid(size)
 }
 
 function eventListener() {
